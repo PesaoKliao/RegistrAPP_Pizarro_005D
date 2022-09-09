@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>loginAlumno</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-grid class="margindiv">
+    <ion-row>
+      <ion-col size="12">
+  <form #formulario="ngForm" (ngSubmit)="onSubmit()">
+    <ion-card>
+    
+      <ion-item>
+        <ion-input type="email" placeholder="Digite Su Email:" name="email" [(ngModel)]="usuario.email" required></ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <ion-input type="password" placeholder="Digite su password:" name="password" [(ngModel)]="usuario.password" required></ion-input>
+      </ion-item>
+  
+    </ion-card>
+    <div class="center">
+        <ion-button class="btnenviar" [disabled]="formulario.invalid" type="submit" routerLink="/alumno">
+          Enviar
+        </ion-button>
+    </div>
+  </form>
+
+
+</ion-col>
+</ion-row>
+</ion-grid>
+
+</ion-content>
